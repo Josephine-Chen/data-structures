@@ -9,13 +9,13 @@ var LinkedList = function() {
     if (!currentNode) {
       //If empty linked list
       this.head = node;
-    } else{
+    } else {
       //Move to the tail of the linked list
       while (currentNode.next) {
-      currentNode = currentNode.next;
+        currentNode = currentNode.next;
       }
       //Point the old tail to the new tail
-    currentNode.next = node;
+      currentNode.next = node;
 
     }
     this.tail = node;
@@ -39,7 +39,7 @@ var LinkedList = function() {
       return false;
 
     } else {
-      while(currentNode.next) {
+      while (currentNode.next) {
         if (currentNode.value === target) {
           return true;
         } else {
@@ -51,9 +51,9 @@ var LinkedList = function() {
       }
       return false;
     }
-  }
+  };
 
-    return list;
+  return list;
 };
 
 var Node = function(value) {
@@ -67,4 +67,5 @@ var Node = function(value) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ O(N) - Linear because list needs to be traversed in order to add tail.
  */
