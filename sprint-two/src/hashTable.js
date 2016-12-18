@@ -79,7 +79,7 @@ HashTable.prototype.resize = function(newLimit) {
       if (bucket) {
         for (var i = 0; i < bucket.length; i++) {
           var tuple = bucket[i];
-          this.insert(tuple[0],tuple[1]);
+          this.insert(tuple[0], tuple[1]);
         }
       }
     }.bind(this));
